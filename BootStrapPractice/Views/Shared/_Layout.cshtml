@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - PracticeBootStrap Useing 北風網瓢城教材 </title>
+    <title>@ViewBag.Title - PracticeBootStrap Useing Youtube 北風網 瓢城Web俱樂部教材 </title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -14,16 +14,23 @@
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <a href="#" class="navbar-brand" style="padding:0;"><img src="~/Image/logo.png" alt="Test"/></a>
+                <a href="#" class="navbar-brand" style="padding:0;"><img src="~/Image/logo.png" alt="Test" /></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
 
-            <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> 首頁</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-list"></span> 資訊</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-fire"></span> 案例</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> 關於</a></li>
-            </ul>	
+            <div class="collapse navbar-collapse" id="navbar-collapse" >
+                <ul class="nav navbar-nav navbar-right" style="margin-top:0">
+                    <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> 首頁</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-list"></span> 資訊</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-fire"></span> 案例</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> 關於</a></li>
+                </ul>
 
+            </div>
         </div>
     </nav>
 

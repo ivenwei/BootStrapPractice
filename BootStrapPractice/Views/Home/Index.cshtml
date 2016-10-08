@@ -2,10 +2,34 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<!--輪播圖 class="carousel slide"-->
+<div id="myCarousel" class="carousel slide">
+    <ol class="carousel-indicators">
+        <!--和myCarousel 綁定 li內#myCarousel-->
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+        <!--第一章圖顯示 active-->
+        <div class="item active" style="background:#223240">
+            <img src="~/Image/slide1.png" />
+        </div>
+        <div class="item" style="background:#F5E4DC">
+            <img src="~/Image/slide2.png" />
+        </div>
+        <div class="item" style="background:#DE2A2D">
+            <img src="~/Image/slide3.png" />
+        </div>
+    </div>
+    <!--左右的點集 和#myCarousel綁定  &lsaquo=左箭頭 &rsaquo=右箭頭;-->
+    <!--data-slide="prev"=>上一頁  data-slide="next"=>下一頁-->
+    <!--class="carousel-control left"=>左箭頭樣式  class="carousel-control right"=>右箭頭樣式-->
+    <!--箭頭樣式太小 透過CSS加大他-->
+    <!--使用JQ讓箭頭都固定在圖中央兩側-->
+    <a href="#myCarousel" data-slide="prev" class="carousel-control left">&lsaquo;</a>
+    <a href="#myCarousel" data-slide="next" class="carousel-control right">&rsaquo;</a>
 </div>
 
 <div class="row">

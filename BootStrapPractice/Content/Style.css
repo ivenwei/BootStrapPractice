@@ -1,0 +1,19 @@
+﻿body {
+}
+
+.logo {
+	padding:0;
+}
+
+#navbar-collapse ul {
+	margin-top:0;
+}
+
+.carousel-inner img{
+    margin: 0 auto;
+}
+
+/*建議取一個可區分的名字*/
+.carousel-control{
+    font-size : 100px;
+}

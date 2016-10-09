@@ -196,6 +196,8 @@
     <Content Include="Image\tab1-2.png" />
     <Content Include="Image\tab1-3.png" />
     <Content Include="Image\tab1-4.png" />
+    <Content Include="Image\tab2.png" />
+    <Content Include="Image\tab3.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

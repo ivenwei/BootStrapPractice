@@ -1,5 +1,6 @@
 ﻿body {
 	font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+    color: #666;
 }
 
 .logo {
@@ -56,8 +57,56 @@
     padding : 20px;
 }
 
-/*没有小於768px，是因為Bootstrap3以手機為優先設計*/
+#footer{
+    background-color: #eee;
+	border-top: 1px solid #ccc;
+	padding: 20px;
+	text-align: center;
+}
 
+.tab2{
+    background-color:#eee;
+    padding : 60px 20px;
+    text-align : center;
+}
+
+.tab2 img{
+    width : 40%;
+    height : 40%
+}
+
+.tab3{
+    padding : 60px 0px;
+    text-align : center;
+}
+
+.tab3 img{
+    width : 65%;
+    height : 65%
+}
+
+/*/*text h3默認情況下的font-size*/
+/*.text h3{
+    font-size : 26px;
+}*/
+
+/*text P默認情況下的font-size*/
+/*.text p{
+    font-size : 18px;
+}*/
+
+/*移動端想法思考*/
+.text h3{
+    font-size : 20px;
+}
+
+/*移動端想法思考*/
+.text p{
+    font-size : 14px;
+}
+
+
+/*没有小於768px，是因為Bootstrap3以手機為優先設計*/
 /* 小屏幕（平板，大于等于768px） */
 @media (min-width: 768px) {
 	.tab-h2 {
@@ -66,6 +115,18 @@
 	.tab-p {
 		font-size: 16px;
 	}
+    .text h3 {
+		font-size: 22px;
+	}
+	.text p {
+		font-size: 15px;
+	}
+    .tab2-text{
+        float : left;
+    }
+    .tab2 img{
+        float : right;
+    }
 }
 
 /* 中等屏幕（桌面显示器，大于等于992px） */
@@ -75,6 +136,12 @@
 	}
 	.tab-p {
 		font-size: 17px;
+	}
+    .text h3 {
+		font-size: 24px;
+	}
+	.text p {
+		font-size: 16px;
 	}
 }
 
@@ -86,4 +153,11 @@
 	.tab-p {
 		font-size: 18px;
 	}
+    .text h3 {
+		font-size: 26px;
+	}
+	.text p {
+		font-size: 18px;
+	}
 }
+

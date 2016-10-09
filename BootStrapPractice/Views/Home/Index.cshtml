@@ -28,28 +28,73 @@
     <!--class="carousel-control left"=>左箭頭樣式  class="carousel-control right"=>右箭頭樣式-->
     <!--箭頭樣式太小 透過CSS加大他-->
     <!--使用JQ讓箭頭都固定在圖中央兩側-->
-    <a href="#myCarousel" data-slide="prev" class="carousel-control left">&lsaquo;</a>
-    <a href="#myCarousel" data-slide="next" class="carousel-control right">&rsaquo;</a>
+    @*<a href="#myCarousel" data-slide="prev" class="carousel-control left">&lsaquo;</a>
+        <a href="#myCarousel" data-slide="next" class="carousel-control right">&rsaquo;</a>*@
+
+
+    <!--不用透過JQ版本  使用圖標-->
+    <a href="#myCarousel" data-slide="prev" class="carousel-control left">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a href="#myCarousel" data-slide="next" class="carousel-control right">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+<div class="tab1">
+    <div class="container">
+        <h2 class="tab-h2">「為什麼選擇庫奇培訓」</h2>
+        <p class="tab-p">強大的師資，完美實戰管理課程，讓你突飛猛進！</p>
+        <div class="row">
+            <div class="col-md-6 col">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#"><img src="~/Image/tab1-1.png" class="media-object" alt="" /></a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">課程內容</h4>
+                        <p class="text-muted">其他：不知名講師，没有任何實戰價值的教材！</p>
+                        <p>我們：知名企業家、管理學大師聯合編寫的教材！</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#"><img src="~/Image/tab1-2.png" class="media-object" alt="" /></a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">師資力量</h4>
+                        <p class="text-muted">其他：非歐美正牌大學畢業、業界無知名度的講師！</p>
+                        <p>我們：美國哈佛、耶魯等世界一流名校！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#"><img src="~/Image/tab1-3.png" class="media-object" alt="" /></a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">課程安排</h4>
+                        <p class="text-muted">其他：無法保證上課效率、沒有時間表、任務無法完成！</p>
+                        <p>我們：保證按時間表上課、效率高、當天任務當天完成！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#"><img src="~/Image/tab1-4.png" class="media-object" alt="" /></a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">服務團隊</h4>
+                        <p class="text-muted">其他：社會招聘、員工品質參差不齊！</p>
+                        <p>我們：內部培訓、品質優良員工！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

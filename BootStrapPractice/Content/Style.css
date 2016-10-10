@@ -57,13 +57,6 @@
     padding : 20px;
 }
 
-#footer{
-    background-color: #eee;
-	border-top: 1px solid #ccc;
-	padding: 20px;
-	text-align: center;
-}
-
 .tab2{
     background-color:#eee;
     padding : 60px 20px;
@@ -106,6 +99,52 @@
 }
 
 
+.jumbotron {
+    background-image: url('../Image/bg.jpg');
+    margin : 50px 0 0 0;
+    color : #ccc;
+}
+
+.jumbotron h1{
+   font-size : 26px;
+   padding : 0 0 0 20px;
+}
+
+.jumbotron h4{
+    font-size : 15px;
+    padding : 0 0 0 20px;
+}
+
+#information{
+    background-color : #eee;
+    padding : 40px 0;
+}
+.info-content{
+    background-color : #fff;
+    margin : 0 0 20px 0;
+    box-shadow : 2px 2px 3px #ccc; 
+}
+
+.info-content img{
+    margin : 15px 0;
+}
+
+.info-content h4{
+    color:#333;
+    padding : 2px 0 0 0;
+}
+
+.info-content p{
+    line-height : 1.6;
+}
+#footer{
+    background-color: #666;
+	border-top: 1px solid #ccc;
+	padding: 20px;
+	text-align: center;
+    color : #eee;
+}
+
 /*没有小於768px，是因為Bootstrap3以手機為優先設計*/
 /* 小屏幕（平板，大于等于768px） */
 @media (min-width: 768px) {
@@ -127,6 +166,13 @@
     .tab2 img{
         float : right;
     }
+    .jumbotron h1{
+       font-size : 30px;
+    }
+
+    .jumbotron h4{
+        font-size : 16px;
+    }
 }
 
 /* 中等屏幕（桌面显示器，大于等于992px） */
@@ -143,6 +189,13 @@
 	.text p {
 		font-size: 16px;
 	}
+    .jumbotron h1{
+       font-size : 33px;
+    }
+
+    .jumbotron h4{
+        font-size : 17px;
+    }
 }
 
 /* 大屏幕（大桌面显示器，大于等于1200px） */
@@ -159,5 +212,11 @@
 	.text p {
 		font-size: 18px;
 	}
+    .jumbotron h1{
+        font-size : 36px;
+    }
+    .jumbotron h4{
+        font-size : 18px;
+    }
 }
 

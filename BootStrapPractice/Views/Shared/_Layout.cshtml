@@ -25,12 +25,10 @@
 
             <div class="collapse navbar-collapse" id="navbar-collapse" >
                 <ul class="nav navbar-nav navbar-right">
-                    
-                    @*<li class="active"><a href="~/Home/index"><span class="glyphicon glyphicon-home"></span> 資訊</a></li>*@
-                    <li class="active"><a href="@Url.Action("Index","Home")"><span class="glyphicon glyphicon-home"></span> 資訊</a></li>
+                    <li class="active"><a href="@Url.Action("Index","Home")"><span class="glyphicon glyphicon-home"></span> 首頁</a></li>
                     <li><a href="@Url.Action("Index","Information")"><span class="glyphicon glyphicon-list"></span> 資訊</a></li>
                     <li><a href="@Url.Action("Index","Case")"><span class="glyphicon glyphicon-fire"></span> 案例</a></li>
-                    <li><a href="@Url.Action("about","Home")"><span class="glyphicon glyphicon-question-sign"></span> 關於</a></li>
+                    <li><a href="@Url.Action("About","Home")"><span class="glyphicon glyphicon-question-sign"></span> 關於</a></li>
                 </ul>
             </div>
         </div>

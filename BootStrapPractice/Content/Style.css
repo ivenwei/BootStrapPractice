@@ -164,6 +164,23 @@
     line-height : 1.6;
 }
 
+#case{
+    padding : 40px 0;
+    background-color : #eee;
+    text-align : center;
+}
+
+#case h4{
+    color : #666;
+}
+#case p{
+    color : #666;
+    line-height : 1.6;
+}
+
+#case .col{
+    margin : 0 0 20px 0;
+}
 #footer{
     background-color: #666;
 	border-top: 1px solid #ccc;

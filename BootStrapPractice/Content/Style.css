@@ -121,7 +121,7 @@
 }
 .info-content{
     background-color : #fff;
-    margin : 0 0 20px 0;
+    margin : 0 0 8px 0; /*以移動端先開始的話為14*/
     box-shadow : 2px 2px 3px #ccc; 
 }
 
@@ -132,6 +132,7 @@
 .info-content h4{
     color:#333;
     padding : 2px 0 0 0;
+    font-size : 14px; /*以移動端先開始的話為14*/
 }
 
 .info-content p{
@@ -173,6 +174,12 @@
     .jumbotron h4{
         font-size : 16px;
     }
+    .info-content h4{
+        font-size : 16px;
+    }
+    .info-content{
+        margin : 0 0 12px 0;
+    }
 }
 
 /* 中等屏幕（桌面显示器，大于等于992px） */
@@ -196,6 +203,12 @@
     .jumbotron h4{
         font-size : 17px;
     }
+    .info-content h4{
+        font-size : 18px;
+    }
+    .info-content{
+        margin : 0 0 16px 0;
+    }
 }
 
 /* 大屏幕（大桌面显示器，大于等于1200px） */
@@ -217,6 +230,12 @@
     }
     .jumbotron h4{
         font-size : 18px;
+    }
+    .info-content h4{
+        font-size : 20px;
+    }
+    .info-content{
+        margin : 0 0 18px 0;
     }
 }
 

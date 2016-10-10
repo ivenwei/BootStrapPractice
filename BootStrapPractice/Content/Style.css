@@ -98,10 +98,9 @@
     font-size : 14px;
 }
 
-
 .jumbotron {
     background-image: url('../Image/bg.jpg');
-    margin : 50px 0 0 0;
+    margin : 0 0 0 0;
     color : #ccc;
 }
 
@@ -133,11 +132,38 @@
     color:#333;
     padding : 2px 0 0 0;
     font-size : 14px; /*以移動端先開始的話為14*/
+    overflow : hidden;/*文字有溢出就隱藏*/
+    white-space :nowrap;/*只能顯示一行*/
+    text-overflow :ellipsis;/*溢出呈現...*/
 }
 
 .info-content p{
     line-height : 1.6;
 }
+
+.info-right{
+    background-color : #fff;
+    box-shadow : 2px 2px 3px #ccc; 
+}
+
+.info-right blockquote{
+    margin : 0;
+    padding : 0;
+}
+
+.info-right h2{
+    font-size:20px;
+    color : #333;
+    padding : 5px;
+}
+
+.info-right h4{
+    font-size:16px;
+    color : #333;
+    padding : 2px 0 0 0;
+    line-height : 1.6;
+}
+
 #footer{
     background-color: #666;
 	border-top: 1px solid #ccc;
@@ -176,6 +202,9 @@
     }
     .info-content h4{
         font-size : 16px;
+        overflow : hidden;/*文字有溢出就隱藏*/
+        white-space :nowrap;/*只能顯示一行*/
+        text-overflow :ellipsis;/*溢出呈現...*/
     }
     .info-content{
         margin : 0 0 12px 0;

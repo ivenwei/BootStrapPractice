@@ -270,6 +270,7 @@
     <Content Include="Views\Information\Index.cshtml" />
     <Content Include="Views\Case\Index.cshtml" />
     <Content Include="Views\BS3Practice\BS3PracticeLayout.cshtml" />
+    <Content Include="Views\BS3Practice\BS3PracticeTableAndButton.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

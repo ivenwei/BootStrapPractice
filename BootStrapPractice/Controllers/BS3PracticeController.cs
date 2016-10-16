@@ -20,5 +20,11 @@ namespace BootStrapPractice.Controllers
             return View();
         }
 
+
+        // GET: BS3Practice
+        public ActionResult BS3PracticeTableAndButton()
+        {
+            return View();
+        }
     }
 }

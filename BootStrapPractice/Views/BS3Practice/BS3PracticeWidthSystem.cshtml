@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "BS3PracticeWidthSystem-格子系統";
+}
+<style>
+    .a {
+        height: 50px;
+        border: 1px solid #ccc;
+        background-color: #eee;
+    }
+</style>
+
+<div style="margin:50px;">
+
+    <!--要處理格子系統就一定會用到 container & container-fluid(100%寬度)  兩者不能相互使用-->
+    <!--1200px 裡面1170px-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1 a">1</div>
+            <div class="col-md-1 a">1</div>
+            <div class="col-md-1 a">1</div>
+            <div class="col-md-1 a">1</div>
+            <div class="col-md-1 a">1</div>
+            <div class="col-md-1 a">1</div>
+            <div class="col-md-1 a">1</div>
+            <div class="col-md-1 a">1</div>
+            <div class="col-md-1 a">1</div>
+            <div class="col-md-1 a">1</div>
+            <div class="col-md-1 a">1</div>
+            <div class="col-md-1 a">1</div>
+        </div>
+        <div class="row">
+            <div class="col-md-9 a">9</div>
+            <div class="col-md-3 a">3</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 a">4</div>
+            <div class="col-md-4 a">4</div>
+            <div class="col-md-4 a">4</div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 a">a</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 a">a</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 a">a</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 a">a</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 a">a</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 a">a</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 a">a</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 a">a</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 a">a</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 a">a</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 a">a</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 a">a</div>
+        </div>
+    </div>
+
+
+    <!--列偏移-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 a">8</div>
+            <!--offset-1 向右邊移一位-->
+            <div class="col-md-3 col-md-offset-1 a">3</div>
+        </div>
+
+        <div class="row">
+            <!--嵌入-->
+            <div class="col-md-9 a" style="padding:0px;">
+                <div class="col-md-4 a">4</div>
+                <div class="col-md-4 a">4</div>
+                <div class="col-md-4 a">4</div>
+            </div>
+            <div class="col-md-3 a">3</div>
+        </div>
+
+        <div class="row">
+            <!--換邊-->
+            <div class="col-md-9 col-md-push-3 a">9</div>
+            <div class="col-md-3 col-md-pull-9 a">3</div>
+        </div>
+    </div>
+
+</div>
+

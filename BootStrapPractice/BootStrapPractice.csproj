@@ -283,6 +283,7 @@
     <Content Include="Views\BS3Practice\BS3PracticeLayout.cshtml" />
     <Content Include="Views\BS3Practice\BS3PracticeTableAndButton.cshtml" />
     <Content Include="Views\BS3Practice\BS3PracticeFormAndPicture.cshtml" />
+    <Content Include="Views\BS3Practice\BS3PracticeWidthSystem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

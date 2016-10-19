@@ -288,6 +288,7 @@
     <Content Include="Views\BS3Practice\BS3PracticeWidthSystem.cshtml" />
     <Content Include="Views\JqueryPractice\Basic.cshtml" />
     <Content Include="Views\BS3Practice\BS3PracticeRWDTools.cshtml" />
+    <Content Include="Views\BS3Practice\BS3PracticeSmallPicAndButton.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

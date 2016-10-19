@@ -44,5 +44,11 @@ namespace BootStrapPractice.Controllers
         {
             return View();
         }
+
+        // GET: BS3Practice
+        public ActionResult BS3PracticeSmallPicAndButton()
+        {
+            return View();
+        }
     }
 }

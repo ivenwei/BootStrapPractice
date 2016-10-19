@@ -19,5 +19,11 @@ namespace BootStrapPractice.Controllers
         {
             return View();
         }
+
+        // GET: JqueryPractice
+        public ActionResult NormalSelector1()
+        {
+            return View();
+        }
     }
 }

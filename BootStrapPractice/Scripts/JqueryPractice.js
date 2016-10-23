@@ -65,4 +65,33 @@ $(function () {
     //if ($('#pox')[0]) {
     //    //...
     //}
+    //=========================class5========================
+
+    //群組選擇器
+    //$('div, p, strong').css('color','red')
+    //$('#box, .pox, strong').css('color', 'red')
+
+    //後代選擇器
+    //$('ul li a').css('color', 'green')
+
+
+    //通配選擇器
+    //$('*').css('color', 'green');
+    //alert($('*').size())
+    //alert($('*')[0].nodeName)
+    //在全局範圍使用*會消耗極大資源 不建議在全局使用
+
+
+    //$('ul li a, ul li em, ul li strong').css('color', 'green');
+    //$('ul li, ul li a').css('color', 'green');
+    //$('ul li *').css('color', 'blue');
+    //$('ul li *').css('color', 'blue');
+    //$('#practiceUL li *').css('color', 'blue');
+    //alert($('#practiceUL li *').size())  //通配選擇器一般運用在局部的環境內
+
+    //$('div.box').css('color', 'red');
+    //$('.box.pox').css('color', 'red');
+
+    //$('div#box p ul li a #link');//不建議這樣使用 因為選擇器越複雜 解析速度就越慢
+    //$('#link') //只有ID不需要解析就可以獲取到
 })

@@ -15,10 +15,51 @@ div{
  #box > p{
     color : red; //添加樣式
 }
-
+//=========================class5========================
 */
 
+/*div{
+    color : orange;
+}
+
+p{
+    color : orange;
+}
+
+strong{
+    color : orange;
+}*/
+
+/*div, p, strong{
+    color : orange;
+}*/
+
+/*a{
+    color : red;
+}*/
+
+/*.li-a{
+    color : red;
+}*/
+
+/*ul a{
+    color : green;
+}*/
+
+/*ul li a{
+    color : yellow;
+}*/
+
+/** {
+    color : blue;
+}*/
 
 
+/*.box , .pox{
+    color : yellow;
+}*/
 
+/*.box.pox{
+    color : yellow;
+}*/
 

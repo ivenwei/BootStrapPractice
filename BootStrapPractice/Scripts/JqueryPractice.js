@@ -94,4 +94,51 @@ $(function () {
 
     //$('div#box p ul li a #link');//不建議這樣使用 因為選擇器越複雜 解析速度就越慢
     //$('#link') //只有ID不需要解析就可以獲取到
+
+    //=========================class6========================
+
+    //後代選擇器的另一個方法 使用FIND
+    //$('#box p').css('color', 'red');
+    //$('#box').find('p').css('color', 'red');
+
+    //子選擇器
+    //$('#box>p').css('color', 'red')
+    //children('#p') children('.p')都可
+    //$('#box').children('p').css('color', 'blue')
+
+    //next選擇器 => 指定(id=box)的下一個節點為P才有作用
+    //next方法
+    //$('#box + p').css('color', 'blue')
+    //$('#box').next('p').css('color', 'maroon')
+
+    //nextAll選擇器 => 指定(id=box)的同等級往下的節點都會有作用
+    //$('#box ~ p').css('color', 'blue');
+    //nextAll方法
+    //$('#box').nextAll('p').css('color', 'orange');
+
+    //.next() = .next('*') 不管下一個節點內容為甚麼都會被選擇
+    //若'*'在某個環境有所浪費的話 建議不使用
+    //$('#box').next().css('color', 'orange')
+    //$('#box').next('*').css('color', 'orange')
+
+    //prev  同等級的上一個節點
+    //$('#box').prev('p').css('color', 'red');
+    //$('#box').prevAll('p').css('color', 'red');
+    //上面和下面都變顏色
+    //$('#box').prevAll('p').css('color', 'orange');
+    //$('#box').nextAll('p').css('color', 'orange');
+    //$('#box').prevAll('p').nextAll('p').css('color', 'orange')//錯誤的形式 不可這樣使用
+
+    //siblings 上下同級所有的被選定
+    //$('#box').siblings('p').css('color', 'blue');
+
+    //nextUntil 方法
+    //從指定節點往下掃 遇到指定的節點就停止  下面案例為從id=box節點往下掃 遇到節點為p的時候就停止
+    //$('#box').nextUntil('p').css('color', 'red');
+
+    //prevUntil 方法
+    //從指定節點往上掃 遇到指定的節點就停止  下面案例為從id=box節點往上掃 遇到節點為p的時候就停止
+    //$('#box').prevUntil('p').css('color', 'blue');
+
+
 })

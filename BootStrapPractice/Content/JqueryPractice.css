@@ -61,5 +61,23 @@ strong{
 
 /*.box.pox{
     color : yellow;
+}
+
+    //=========================class6========================
+
+    CSS IE6不支持
+*/
+
+/*#box > p{
+    color : orange
 }*/
 
+/*+ 鄰近下一個相同層級的P  若鄰近的節點不是P則沒有作用*/
+/*#box + p{
+    color : blueviolet;
+}*/
+
+/*id=box的同等級節點往下找 所有的P 都會有作用*/
+/*#box ~ p{
+    color : rebeccapurple;
+}*/

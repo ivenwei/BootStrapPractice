@@ -140,5 +140,41 @@ $(function () {
     //從指定節點往上掃 遇到指定的節點就停止  下面案例為從id=box節點往上掃 遇到節點為p的時候就停止
     //$('#box').prevUntil('p').css('color', 'blue');
 
+    //=========================class7========================
 
+    //$('#box p').css('color', 'red');
+
+    //全局的P都變顏色
+    //$('p').css('color', 'blue');
+
+    //將要變顏色的P 限定在範圍內
+    //這樣寫JQ會自動將轉譯為成$('#box').find('p') 但慢了5%-10%
+    //$('p','#box').css('color', 'blue');
+
+    //jQuery 自動將轉譯為成$('#box').find('p')，比最快的慢了23%
+    //$('p', $('#box')).css('color', 'orange');
+
+    //a 有title屬性的就選定他
+    //$('a[title]').css('color', 'orange');
+
+    //a 有title屬性且屬性質為number1的就選定他
+    //$('a[title=number1]').css('color', 'red');
+
+    //a 有title屬性且開頭屬性質為num的就選定他
+    //$('a[title^=num]').css('color', 'red');
+
+    //a 有title屬性且結尾屬性質為num的就選定他
+    //$('a[title$=number]').css('color', 'red');
+
+    //有title屬性且開頭屬性質為num後面包含一個- 的就選定他
+    //$('a[title|=number]').css('color', 'red');
+
+    //有title屬性且屬性質不等於number1的就選定他
+    //$('a[title!=number1]').css('color', 'red');
+
+    //$('a[title~=aaa]').css('color', 'red');
+
+    //$('a[title*=number1]').css('color', 'red');
+
+    //$('a[bbb][title=number1]').css('color', 'red');
 })

@@ -292,6 +292,7 @@
     <Content Include="Views\BS3Practice\BS3PracticeSmallPicAndButton.cshtml" />
     <Content Include="Views\JqueryPractice\NormalSelector1.cshtml" />
     <Content Include="Views\BS3Practice\BS3PracticeInputAndNav.cshtml" />
+    <Content Include="Views\BS3Practice\BS3PracticePathAndTagAndPaging.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

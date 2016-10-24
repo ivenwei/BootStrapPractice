@@ -291,6 +291,7 @@
     <Content Include="Views\BS3Practice\BS3PracticeRWDTools.cshtml" />
     <Content Include="Views\BS3Practice\BS3PracticeSmallPicAndButton.cshtml" />
     <Content Include="Views\JqueryPractice\NormalSelector1.cshtml" />
+    <Content Include="Views\BS3Practice\BS3PracticeInputAndNav.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

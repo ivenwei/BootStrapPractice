@@ -33,7 +33,7 @@
 //=========================class4========================
 
 //id選擇器
-$(function () {
+//$(function () {
     //添加一個行為 行為叫做添加樣式
     //$('#box').css('color','blue')  //返回多個
     //$('div').css('color', 'orange')//返回1個對象 只認第一個
@@ -177,4 +177,74 @@ $(function () {
     //$('a[title*=number1]').css('color', 'red');
 
     //$('a[bbb][title=number1]').css('color', 'red');
+//})
+
+//=========================class8========================
+
+$(function () {
+    //基本過濾器
+    //$('li:first').css('background', '#ccc');
+    //$('li:last').css('background', '#ccc');
+    //$('#box li:last').css('background', '#ccc');
+    //$('ul:first li:last').css('background', '#ccc')
+    //$('li:not(.red)').css('background', '#ccc')
+    //$('li:even').css('background', '#ccc');
+    //$('li:odd').css('background', '#ccc');
+    //$('li:eq(3)').css('background', '#ccc');
+    //$('li:eq(-2)').css('background', '#ccc');
+    //$('li:gt(2)').css('background', '#ccc');
+    //$('li:gt(-2)').css('background', '#ccc');
+    //$('li:lt(2)').css('background', '#ccc');
+
+    //$(':header').css('background', '#ccc');
+    //後面沒有空格只能是當前的元素
+    //$('h3:header').css('background', '#ccc');
+    //因為header為DIV的後代 因此加入一個空格後再加:header
+    //$('div :header').css('background', '#ccc');
+
+    //$('input').get(0).focus();
+    //$(':focus').css('background', 'red')
+
+    //$('li').first().css('background', '#ccc');
+    //$('li').last().css('background', '#ccc');
+    //$('li').not('.red').css('background', '#ccc');
+    //$('li').eq(5).css('background', '#ccc');
+
+    //內容過濾器 =>主要是子元素或文本内容上
+    //$('div:contains("ycku.com")').css('background', '#ccc');
+    //DIV裡面不能有子元素也不能有文字
+    //$('div:empty').css('background', '#ccc').css('height','20px');
+
+    //錯誤 需要在父元素上調用
+    //$('li:has(.red)').css('background', '#ccc')
+
+    //父元素為UL 檢查裡面是否有class = red 有的話選擇全部UL
+    //$('ul:has(.red)').css('background', '#ccc')
+    //$('ul').has('.red').css('background', '#ccc')
+
+
+    //DIV裡面有子元素或有文字的話就選擇
+    //$('div:parent').css('background', '#ccc');
+
+    //先看返回多少元素
+    //alert($('li').parent().size());
+    //alert($('li').parent().get(0))
+
+    //當前元素的父節點
+    //$('li').parent().css('background', '#ccc')
+    //當前元素的父節點和所有節點
+    //$('li').parents().css('background', '#ccc')
+
+    //遇到某個父節點後然後停止
+    //$('li').parentsUntil('body').css('background', '#ccc')
+
+    //可見性過濾器
+    //display:none、input type="hidden"  和visibility:hidden 的元素都可以操作
+
+    //查看目前div隱藏的元素有幾個
+    //alert($('div:hidden').size());
+    //div隱藏的元素在1秒內呈現出來
+    //$('div:hidden').css('background', '#ccc').show(1000)
+
+    //alert($('div:visible').size());
 })

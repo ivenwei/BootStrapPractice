@@ -25,5 +25,11 @@ namespace BootStrapPractice.Controllers
         {
             return View();
         }
+
+        // GET: JqueryPractice
+        public ActionResult FilterSelector()
+        {
+            return View();
+        }
     }
 }

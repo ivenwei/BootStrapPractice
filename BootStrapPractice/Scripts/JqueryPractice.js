@@ -247,4 +247,90 @@ $(function () {
     //$('div:hidden').css('background', '#ccc').show(1000)
 
     //alert($('div:visible').size());
+
+    //=========================class9========================
+    //子元素過濾器
+
+    //先找到LI的父元素UL 再查看所有UL下面的LI的第一個元素 
+    //$('li:first-child').css('background', '#ccc');
+    //$('li:last-child').css('background', '#ccc');
+
+    //先找到LI的父元素UL 再查看所有UL下面只有一個LI的元素
+    //$('li:only-child').css('background', '#ccc');
+
+
+    //索引值從1開始
+    //$('li:nth-child(even)').css('background', '#ccc');
+    //$('li:nth-child(odd)').css('background', '#ccc');
+    //$('li:nth-child(2)').css('background', '#ccc');
+
+    //2n每隔2倍顯示
+    //$('li:nth-child(2n)').css('background', '#ccc');
+    //$('li:nth-child(3n)').css('background', '#ccc');
+
+    //倍數的下一個顯示
+    //$('li:nth-child(3n+1)').css('background', '#ccc');
+
+
+    //過濾器和選擇器上常用的方法
+
+    //alert($('.red').is('li'))
+    //alert($('.red').is('div'))
+    //alert($('.red').is($('li')))
+    //alert($('.red').is($('div')))
+
+    //alert($('.red').is($('li').get(2)))
+    //alert($('.red').is($('li').eq(2)))
+
+    //$('.red').is(function () {
+    //    //$(this) = $('.red')
+    //    return $(this);
+    //})
+
+    /*
+    //注意，必需使用$(this)來表示要判断的元素，否則，不管function裡面是否返回true或false都和調用的元素無關了
+    alert($('.red').is(function () {
+        //$(this) = $('.red')
+        //alert( $(this).get(0));
+        return $(this).attr('title') == '列表3';  //true
+        //return $(this).attr('title') == '列表4';  //false
+    }))
+    */
+    
+    //判斷第2個LI CLASS是否為red
+    //alert($('li').eq(2).hasClass('red'))
+    //第1個為起始元素(起始值為0) 第2個為到第幾個索引元素(起始值為1)
+    //$('li').slice(0, 2).css('background', '#ccc');
+
+    //第1個為起始元素(起始值為0)  第2個參數未指定表示全部選定
+    //$('li').slice(2).css('background', '#ccc');
+
+    //起始元素為0 最後2個不選
+    //$('li').slice(0,-2).css('background', '#ccc');
+
+    //起始元素為2 最後2個不選
+    //$('li').slice(2,-2).css('background', '#ccc');
+
+
+    //end為返回指定元素的前一個狀態的元素對象  以例子而言為#box
+    //$('#box').find('li').end().get(0);
+    //alert($('#box').find('li').get(0));
+    //alert($('#box').find('li').end().get(0));
+    //alert($('#box').find('li').parent().get(0));
+    //$('#box').next('ul').css('background', '#ccc');
+    //$('#box').next('ul').end().css('background', '#ccc');
+
+    //第一個div的子元素有幾個(只會偵測出子元素不會有內容)
+    //alert($('div').first().children().size());
+    //第一個div的子元素有幾個(包含TAG和內容)
+    //alert($('div').first().contents().size());
+
+
+    //$('li').filter('.red,:first,:last').css('background', '#ccc');
+    //$('li').filter('.red,:first-child,:last-child').css('background', '#ccc');
+
+    $('li').filter(function () {
+        return $(this).attr('class') == 'red' && $(this).attr('title') == '列表3';
+    }).css('background', '#ccc');
+
 })

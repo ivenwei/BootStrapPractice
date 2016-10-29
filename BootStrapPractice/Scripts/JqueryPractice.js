@@ -181,7 +181,7 @@
 
 //=========================class8========================
 
-$(function () {
+//$(function () {
     //基本過濾器
     //$('li:first').css('background', '#ccc');
     //$('li:last').css('background', '#ccc');
@@ -329,8 +329,206 @@ $(function () {
     //$('li').filter('.red,:first,:last').css('background', '#ccc');
     //$('li').filter('.red,:first-child,:last-child').css('background', '#ccc');
 
-    $('li').filter(function () {
-        return $(this).attr('class') == 'red' && $(this).attr('title') == '列表3';
-    }).css('background', '#ccc');
+//    $('li').filter(function () {
+//        return $(this).attr('class') == 'red' && $(this).attr('title') == '列表3';
+//    }).css('background', '#ccc');
 
-})
+//})
+
+
+//=============class10================
+//$(function () {
+
+    //設定元素和內容
+    //HTML content
+    //alert($('#box').html());
+    //替換HTML內容 有HTML會自動解析
+    //$('#box').html('<em>www.google.com</em>')
+
+    //得到內文 自動清理HTML
+    //alert($('#box').text());
+    //替換內文  有HTML會自動轉譯
+    //$('#box').text('<em>www.google.com</em>')
+
+    //alert($('input').val());
+    //$('input').val('北風網')
+
+    //alert($('input').val());
+    //$('input').val('女')
+    //$('input').val(['Boy', 'Girl', '編程'])
+
+
+    //元素屬性操作
+
+    //取得ID屬性
+    //alert($('#box').attr('id'));
+
+    //設定屬性
+    //$('div').attr('title', 'ivAN');
+
+    //$('div').attr({
+    //    'title': 'i am cool',
+    //    'class': 'red',     //class不建議用attr 後面有功能更強大的功能代替
+    //    'data' : '123'
+    //});
+
+    //$('div').attr('title', function () {
+    //    return 'i am cool'
+    //});
+
+
+    //value是原來的屬性直  若沒有值存在可以不使用
+    //$('div').attr('title', function (index,value) {
+    //    return 'Old title is ' + value + ',New title is i am cool No ' + index;
+    //});
+
+
+    //$('div').html($('div').html()+' <em>www.google.com</em>')
+
+    //$('div').html(function (index,value) {
+    //    return value + '<em>www.google.com</em>';
+    //});
+
+    //$('div').removeAttr('title');
+//});
+
+//=============class11================
+//$(function () {
+
+    //沒有任CSS情況下 rgb(0,0,0)
+    //alert($('div').css('color'));
+
+    //$('div').css('color','red')
+
+    //顯示出來的東西有設置屬性會比瀏覽器默認屬性程度高
+    //var box = $('div').css(['color', 'width', 'height']);
+
+    //JS語法
+    //for (var i in box) {
+    //    alert(i + ' : ' + box[i])
+    //}
+
+    //Jquery 迴圈用法
+    //$.each(box, function (attr,value) {
+    //    alert(attr + ':' + value);
+    //});
+
+    //alert($('div')[0]);
+
+    //$('div').each(function (index, value) {
+    //    alert(index + ' : ' + value);
+    //});
+
+    //$('div').each(function (index, element) {
+    //    alert(index + ' : ' + element);
+    //});
+
+    //設置多屬性CSS用法
+    //$('div').css('color','red').css('background-color','blue')
+    //$('div').css({
+    //    'color': 'blue',
+    //    'background-color': '#eee',
+    //    'width': '200px',
+    //    'height' : '20px'
+
+    //});
+
+    //局部操作屬性參數
+    //$('div').css('width', function (index, value) {
+    //    //alert(index + ':' + value);
+    //    return parseInt(value) - 500+'px';
+    //});
+
+
+    ////添加CSS CLASS
+    //$('div').addClass('red bg size');
+    ////刪除CSS CLASS
+    //$('div').removeClass('bg')
+
+
+    //兩個樣式之間的切換  默認樣式和指定樣式切換
+    //$('div').click(function () {
+    //    $(this).toggleClass('red size');
+    //});
+
+    //$('div').click(function () {
+    //    $(this).toggleClass('red size', true);
+    //});
+
+    //var count = 0;
+    //$('div').click(function () {
+    //    $(this).toggleClass('red size', count++ % 2 == 0);  //count++%2==0頻率問題
+    //});
+
+
+    //實作樣式之間的切換
+    //$('div').click(function () {
+    //    //這裡只是click的局部 而對toggle來說是全局
+    //    //$(this).addClass('green');  這行不可使用ADD 因為沒有切換效果  必須有一處為toggleClass
+    //    $(this).toggleClass('red');
+    //    if ($(this).hasClass('red')){
+    //        $(this).removeClass('green');
+    //    } else {
+    //        //$(this).addClass('green');
+    //        $(this).toggleClass('green');
+    //    }
+    //});
+
+
+    //$('div').click(function () {
+    //    $(this).toggleClass(function () {
+    //        //動態返回RED或GREEN  但還是有缺點
+    //        return $(this).hasClass('red') ? 'green' : 'red';
+    //    });
+    //});
+
+    //$('div').click(function () {
+    //    $(this).toggleClass(function () {
+    //        //click局部  toggle局部
+    //            if ($(this).hasClass('red')) {
+    //                $(this).removeClass('red')
+    //                return 'green';
+    //            } else {
+    //                $(this).removeClass('green')
+    //                return 'red';
+    //            }
+               
+    //    });  //這邊不建議使用count++%2==0頻率 會出現問題
+    //});
+
+
+    //$('div').click(function () {
+    //    $(this).toggleClass(function (index, classname, switchBool) {
+    //        //顯示出來的index都是會0 因為綁定的是div的Class事件 所以不會有其他的DIV
+    //        alert(index + ':' + classname + ':' + switchBool);
+    //            //click局部  toggle局部
+    //                if ($(this).hasClass('red')) {
+    //                    $(this).removeClass('red')
+    //                    return 'green';
+    //                } else {
+    //                    $(this).removeClass('green')
+    //                    return 'red';
+    //                }
+    //        });  
+    //});
+
+
+    //var count = 0;
+    //$(document).click(function () {
+    //    $('div').toggleClass(function (index, classname, switchBool) {
+    //        //顯示出來的index都是會0 因為綁定的是div的Class事件 所以不會有其他的DIV
+    //        alert(index + ':' + classname + ':' + switchBool);
+    //        //click局部  toggle局部
+    //        if ($(this).hasClass('red')) {
+    //            $(this).removeClass('red')
+    //            return 'green';
+    //        } else {
+    //            $(this).removeClass('green')
+    //            return 'red';
+    //        }
+    //    }, count++ % 2 == 0);
+    //});
+
+//})
+
+//=============class12================

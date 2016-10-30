@@ -532,3 +532,50 @@
 //})
 
 //=============class12================
+
+//$(function () {
+
+    //寬度CSS
+    //alert($('div').css('width'))
+    //alert($('div').width());
+
+    //alert(typeof ($('div').css('width')));  //return string
+    //alert(typeof ($('div').width()));       //return number  功能優化 已經將型態轉換成NUMBER
+    //alert($(window).width())
+    //alert($(document).width())
+
+    //$('div').width(500);
+    //$('div').width('500px');
+    //$('div').width('500pt');
+
+    //$('div').width(function (index, width) {
+    //    return width - 500 + 'px'; //雖然會智能添加上PX 但建議還是加上單位 可以更佳清晰
+    //});
+
+    //高度CSS和寬度類似
+    //alert($(window).height())
+    // HTML 加上                                       padding  border margin
+    //alert($('div').width());                         //200      200    200
+    //alert($('div').innerWidth());                    //400      400    400   計算內邊距
+    //alert($('div').outerWidth());                    //400      600    600   計算邊框
+    //alert($('div').outerWidth(true));                //400      600    800   true = 計算外邊距
+
+
+    //元素偏移方法
+
+    //和網頁邊框的距離
+    //alert($('div').offset());
+    //alert($('div').offset().left);
+    //alert($('div').offset().top);
+    //alert($('strong').offset().top);
+
+
+    //position 為相對於父元素的距離
+    //alert($('div').position().top);
+    //alert($('strong').offset().top);
+    //alert($('strong').position().top);
+
+    //取得滾動軸的數值
+    //alert($(window).scrollTop());
+    //$(window).scrollTop(300)
+//})

@@ -579,3 +579,45 @@
     //alert($(window).scrollTop());
     //$(window).scrollTop(300)
 //})
+
+//=============class13================
+
+$(function () {
+    //動態建立元素節點
+    //var box = '<div id="box">節點</div>'  //建立節點
+    //$('body').append(box);             //插入節點
+
+    //內部插入節點方式
+    //$('div').append('<strong>DOM</strong>');  //DIV 元素內部 & 後面
+
+    //index = 哪一個節點  html = 獲取節點的內容值
+    //$('div').append(function (index,html) {
+    //    return '<strong>DOM</strong>' + index + html
+    //});
+
+    //$('strong').appendTo('div');  //移入操作不需要建立節點
+
+    //$('div').prepend('<strong>DOM</strong>');  //DIV 元素內部 & 前面
+
+    //$('div').prepend(function (index,html) {
+    //        return '<strong>DOM</strong>' + index + html
+    //});
+
+    //$('strong').prependTo('div');
+
+
+    //外部插入節點方式
+    //$('div').after('<strong>DOM</strong>');  //外部 同級(相同父節點)後面
+    //$('div').after(function (index,html) {
+    //        return '<strong>DOM</strong>' + index + html
+    //});
+
+    //$('div').before('<strong>DOM</strong>');  //外部 同級(相同父節點)前面
+    //$('div').before(function (index, html) {
+    //        return '<strong>DOM</strong>' + index + html
+    //});
+
+    //$('strong').insertAfter('div')
+    //$('strong').insertBefore('div')
+
+});

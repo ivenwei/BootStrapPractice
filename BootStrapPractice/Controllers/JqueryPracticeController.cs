@@ -37,5 +37,11 @@ namespace BootStrapPractice.Controllers
         {
             return View();
         }
+
+        // GET: JqueryPractice
+        public ActionResult DOMAndNodeProcess()
+        {
+            return View();
+        }
     }
 }

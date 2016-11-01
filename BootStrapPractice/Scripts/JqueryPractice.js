@@ -582,7 +582,7 @@
 
 //=============class13================
 
-$(function () {
+//$(function () {
     //動態建立元素節點
     //var box = '<div id="box">節點</div>'  //建立節點
     //$('body').append(box);             //插入節點
@@ -620,4 +620,73 @@ $(function () {
     //$('strong').insertAfter('div')
     //$('strong').insertBefore('div')
 
-});
+
+    //=============class14================
+
+    //包裹節點相關應用
+
+    //在DIV節點的外層 添加了一個strong元素
+    //$('div').wrap('<strong class="B"></strong>');
+    //$('div').wrap('</strong>');
+
+    //$('div').wrap('<strong>123</strong>');
+    //$('div').wrap('<strong><em></em></strong>');
+
+    //$('div').wrap($('strong').get(0));
+    //$('div').wrap(document.createElement('strong'))
+
+    //$('div').wrap(function (index) {
+    //    return '<strong>' + index + '</strong>';
+    //});
+
+    //$('div').wrap('<strong><em></em></strong>');
+    //$('div').unwrap(); //移除一層
+    //$('div').unwrap(); //移除一層
+
+    //所有DIV都會包起來
+    //$('div').wrapAll('<strong><em></em></strong>');
+    //$('div').wrapAll(document.createElement('strong'));
+
+    //div的裡面會被放置<strong>元素
+    //$('div').wrapInner('<strong></strong>');
+    //$('div').wrapInner(document.createElement('strong'));
+
+    //$('div').wrapInner(function (index) {
+    //      return '<strong>' + index + '</strong>';
+    //});
+
+
+    //節點操作
+    //$('div').click(function () {
+    //    alert('abc')
+    //});
+
+    //div複製起來 然後新增至body
+    //clone() => True / false  true表示將事件處裡複製過來
+    //$('div').clone().appendTo('body');
+    //$('div').clone(true).appendTo('body');
+    //$('div').clone(false).appendTo('body');
+
+    //刪除節點
+    //$('div').remove();
+    //$('div').remove('.box');
+
+    //alert($('div').remove())
+    //alert($('div').remove().length)
+    //alert($('div').remove().get(0))
+
+    //刪除掉後再添加是沒有事件行為的
+    //$('div').remove().appendTo('body')
+
+    //另一個刪除行為
+    //$('div').detach()
+    //另一個刪除行為再添加會保留事件行為
+    //$('div').detach().appendTo('body')
+
+    //將DIV內容清空但是保留節點
+    //$('div').empty();
+
+    //替換DIV節點  不會保留事件行為
+    //$('div').replaceWith('<span>DOM</span>')
+    //$('<span>DOM</span>').replaceAll('div')
+//});

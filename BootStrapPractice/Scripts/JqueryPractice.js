@@ -690,3 +690,50 @@
     //$('div').replaceWith('<span>DOM</span>')
     //$('<span>DOM</span>').replaceAll('div')
 //});
+
+//=============class15================
+
+//$(function () {
+
+    //常規選擇器
+    //alert($('input').size());
+    //alert($('input').val());
+
+    //這個寫法語意不佳 不會知道是哪個input
+    //alert($('input').eq(1).val());
+
+    //以下寫法語意教上面寫法清晰 但有多個密碼欄怎麼辦呢?
+    //alert($('input[type=password]').val())
+
+    //ID是絕對唯一性 NAME是相對唯一性
+    //alert($('input[name=user]').val())
+    //alert($('input[name=pass]').val())
+
+
+    //如何透過INPUT選擇表單內所有元素
+    //alert($(':input').size());
+    //alert($(':input[name=city]').size());
+    //alert($(':text').size());
+    //alert($(':password').size());
+
+    //清楚指定type為password 且NAME為pass 輸入框 語異
+    //alert($(':password[name="pass"]').size());
+
+
+    //alert($(':radio').size());
+    //如何獲取到第2個radio 女的值
+    //alert($(':radio[name="sex"]').eq(1).val());
+    //alert($(':radio[name="sex"]').last().val());
+
+    //隱藏須注意  要指定是FORM下面的HIDDEN 限定範圍
+    //alert($(':hidden').size());
+    //alert($('form:hidden').size());
+
+    //=======表單過濾器=======
+    //注意form 後面需要空一格  選擇可用元素
+    //alert($('form :enabled').size());
+    //alert($('form :disabled').size());
+    //alert($('form :checked').size());
+    //alert($('form :selected').size());
+    //alert($('form :selected').get(0));
+//});

@@ -298,6 +298,7 @@
     <Content Include="Views\JqueryPractice\DOMAndNodeProcess.cshtml" />
     <Content Include="Views\JqueryPractice\FormSelector.cshtml" />
     <Content Include="Views\JqueryPractice\BasicEvent.cshtml" />
+    <Content Include="Views\JqueryPractice\EventTarget.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -845,7 +845,7 @@
 //});
 
 //=============class17================
-$(function () {
+//$(function () {
     //移出移入
     /*
     $('div').mouseover(function(){
@@ -996,5 +996,124 @@ $(function () {
       }
     });
     */
-})
+//})
 
+//=============class18  &  class19================
+
+$(function () {
+    
+    //=============class18===============
+    //$('input').bind('click', function (e) {
+    //    alert(e);
+    //    //回傳OBJECT
+    //})
+
+    ////說明屬性和方法
+    //$('input').bind('click', function (e) {
+    //    alert(e.type);
+    //    alert(typeof(e.type));
+    //})
+
+    //$('input').bind('click', function (e) {
+    //    alert(e.target);
+    //})
+
+ 
+    //$('input').bind('click', function (e) {
+    //    alert(e.currentTarget);
+    //})
+    
+    //target是獲取觸發元素的DOM,觸發元素就是你點了哪個就是哪個 選擇到區域內的其他元素都會是該元素對象
+    //$('div').bind('click', function (e) {
+    //    alert(e.target);
+    //})
+
+    //currentTarget得到的是監聽元素的DOM,你綁定了哪個就是哪個 無論選擇到區域內的任何元素都會是綁定對向DIV
+    //$('div').bind('click', function (e) {
+    //    alert(e.currentTarget);
+    //})
+    
+
+    //移入SPAN後檢查DOM是甚麼
+    //$('span').bind('mouseover', function (e) {
+    //    alert(e.relatedTarget);
+    //})
+
+    //$('span').bind('mouseout', function (e) {
+    //    alert(e.relatedTarget);
+    //})
+
+    //$('div').bind('click', function (e) {
+    //    alert(this);
+    //})
+
+    //$('div').bind('click', function (e) {
+    //    alert(this==e.currentTarget);
+    //})
+
+    //$('div').bind('click', function (e) {
+    //    alert(this==e.target);
+    //})
+
+
+    //$('input').bind('click',123, function (e) {
+    //    alert(e.data);
+    //})
+
+    //$('input').bind('click', 'abc', function (e) {
+    //    alert(e.data);
+    //})
+
+    //$('input').bind('click', [1,2,3,'a','b'], function (e) {
+    //    alert(e.data);
+    //})
+
+    //$('input').bind('click', [1,2,3,'a','b'], function (e) {
+    //    alert(e.data[3]);
+    //})
+
+    //$('input').bind('click', {user:'Lee',age:100}, function (e) {
+    //    alert(e.data.age);
+    //})
+
+    //$(document).bind('click', function (e) {
+    //    alert(e.pageX + ',' + e.screenX + ',' + e.clientX)
+    //})
+
+    //pageY 頁面的原點有滾軸 則就是目前位置至滾軸圓點位置
+    //screenY 螢幕視窗最上方到目前位置的距離
+    //clientY 為頁面內文原點到目前位置的距離
+    //$(document).bind('click', function (e) {
+    //    alert(e.pageY + ',' + e.screenY + ',' + e.clientY)
+    //})
+
+    //$('input').bind('click', function (e) {
+    //    return 123;
+    //})
+
+    //$('input').bind('click', function (e) {
+    //    alert(e.result)
+    //})
+
+    //$('input').bind('click', function (e) {
+    //      alert(e.timeStamp)
+    //})
+
+    //判斷滑鼠的左中右鍵
+    //$('input').bind('mousedown', function (e) {
+    //    alert(e.which)
+    //})
+
+    //得到鍵盤的按鍵
+    //$('input').bind('keyup', function (e) {
+    //    alert(e.which)
+    //})
+
+    //判斷是否有使用Ctrl按鍵
+    //$('input').bind('click', function (e) {
+    //    alert(e.ctrlKey)
+    //})
+
+    //============== class19================
+
+})

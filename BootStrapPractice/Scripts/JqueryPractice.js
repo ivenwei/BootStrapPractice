@@ -737,3 +737,264 @@
     //alert($('form :selected').size());
     //alert($('form :selected').get(0));
 //});
+
+//=============class16================
+//$(function () {
+    //$('input').bind('click', function () {
+    //    alert('show')
+    //});
+
+    //$('input').bind('click', fn());
+    //function fn() {
+    //    alert('show4')
+    //}
+
+    //可以綁定多個事件  mouseover 為滑鼠移入效果
+    //$('input').bind('click mouseover', function () {
+    //      alert('show')
+    //});
+
+    //$('input').bind('mouseout mouseover', function () {
+    //    $('div').html(function (index, value) {
+    //        return value + '1';
+    //    });
+    //});
+
+
+    //分開撰寫移入移出方法  KEY - VALUE
+    //$('input').bind({
+    //    mouseout: function () {
+    //        alert('移出');
+    //    },
+    //    mouseover: function () {
+    //        alert('移入');
+    //    }
+    //});
+    //$('input').bind({
+    //    'mouseout': function () {
+    //        alert('移出');
+    //    },
+    //    'mouseover': function () {
+    //        alert('移入');
+    //    }
+    //});
+
+
+    //刪除綁定事件
+    //$('input').bind('click mouseover', function () {
+    //    alert('show')
+    //});
+    
+    //$('input').unbind();      //刪除全部事件
+    //$('input').unbind('click'); //刪除click事件
+    //$('input').bind('click', fn1);
+    //$('input').bind('click', fn2);
+
+    //function fn1() {
+    //    alert('fn1')
+    //}
+    //function fn2() {
+    //    alert('fn2')
+    //}
+    //$('input').unbind('click', fn2); //刪除fn2函式的click事件 
+
+    //Jquery封裝事件
+    //$('input').click(function () {
+    //    alert('點1下');
+    //});
+
+    //$('input').dblclick(function () {
+    //    alert('點2下');
+    //});
+
+    //$('input').mousedown(function () {
+    //    alert('滑鼠點一下');
+    //});
+
+    //$('input').mouseup(function () {
+    //    alert('滑鼠點一下放開');
+    //});
+
+    //unload 是整個頁面卸載  一般新瀏覽器不支持
+    //一般用於清理工作 變量清理  內存清理
+    //$(window).unload(function () {
+    //    alert('頁面刷新');
+    //});
+
+    //$(window).resize(function () {
+    //    alert('頁面大小變更');
+    //});
+
+    //$(window).scroll(function () {
+    //    alert('滾動條改變了');
+    //});
+
+    //$('input').select(function () {
+    //    alert('將內文選定後觸發');
+    //});
+
+    //$('input').change(function () {
+    //    alert('將內文改變後觸發');
+    //});
+
+    //表單提交是作用在表單上 不是按鈕本身
+    //$('form').submit(function () {
+    //    alert('表單送出');
+    //});
+
+//});
+
+//=============class17================
+$(function () {
+    //移出移入
+    /*
+    $('div').mouseover(function(){
+      $(this).css('background','red'); 
+    }).mouseout(function(){
+      $(this).css('background','green'); 
+    });  
+    
+    //穿入穿出區別
+    $('div').mouseenter(function(){
+      $(this).css('background','red'); 
+    }).mouseleave(function(){
+      $(this).css('background','green'); 
+    });  
+    
+     //over會觸發子節點
+    $('div').mouseover(function(){
+      $('strong').html(function(index,value){
+        return value + '1';
+      }); 
+    });  
+    
+    //enter不會觸發子節點
+   //enter會比over常用 因為over會造成多次無效觸發
+   $('div').mouseenter(function(){
+      $('strong').html(function(index,value){
+        return value + '1';
+      }); 
+    });  
+    
+    $('div').mouseout(function(){
+      $('strong').html(function(index,value){
+        return value + '1';
+      }); 
+    });  
+    
+    $('div').mouseleave(function(){
+      $('strong').html(function(index,value){
+        return value + '1';
+      }); 
+    });  
+    
+    //單元速操作兩者都可以使用 多元素操作建議使用enter and
+    //leave
+    
+    
+    $('input').keydown(function(){
+      alert('鍵盤按下')
+    });
+   
+     $('input').keyup(function(){
+      alert('鍵盤放開')
+    });
+    
+    
+    //keydown & keypress 為 字串編碼
+    $('input').keydown(function(e){
+      alert(e.keyCode);
+    });
+    
+     $('input').keypress(function(e){
+      alert(e.charCode);
+    });
+    
+    
+    
+    $('input').focus(function(){
+      alert('焦點資訊移入');
+    });
+    
+    $('input').blur(function(){
+      alert('焦點資訊離開');
+    });
+    
+   
+     $('input').focusin(function(){
+      alert('焦點資訊移入');
+    });
+    
+    $('input').focusout(function(){
+      alert('焦點資訊移出');
+    });
+    
+     //focus & blur 是當前元素材會有效
+   $('div').focus(function(){
+      alert('焦點資訊移入');
+    });
+  
+   $('input').focus(function(){
+      alert('焦點資訊移入');
+    });
+    
+     //focus & blur 是當前元素材會有效 裡面的元素不會有效果
+    $('div').focus(function(){
+      alert('焦點資訊移入');
+    });
+    
+    //focusin & focusout 子元素也可以有影響
+    $('div').focusin(function(){
+      alert('焦點資訊移入');
+    });
+    
+    $('input').focusout(function(){
+      alert('焦點資訊移出');
+    });
+    
+    $('div').blur(function(){
+      alert('焦點資訊移出');
+    });
+    
+    $('div').focusout(function(){
+      alert('焦點資訊移出');
+    });
+    
+    //===複合事件=====
+    //DIV移入變紅色 移出變綠色
+    //hover是mouseenter和mouseLeave的結合體
+    $('div').hover(function(){
+      $(this).css('background','red'); 
+    },function(){
+      $(this).css('background','green'); 
+    });
+    
+    $('div').toggle('slow');
+    
+    //toggle 效果需要有向下兼容的JQ套件才能使用
+    //1.10版已刪除此功能
+    $('div').toggle(function(){
+      $(this).css('background','red'); 
+    },function(){
+      $(this).css('background','blue'); 
+    },function(){
+      $(this).css('background','green'); 
+    });
+    
+    //實作Toggle方法
+    var flag = 1;
+    $('div').click(function(){
+      if(flag==1){
+        $(this).css('background','red'); 
+        flag = 2;
+      }else if (flag==2){
+        $(this).css('background','blue'); 
+        flag = 3;
+      }else if (flag==3){
+        $(this).css('background','green'); 
+        flag = 1;
+      }
+    });
+    */
+})
+

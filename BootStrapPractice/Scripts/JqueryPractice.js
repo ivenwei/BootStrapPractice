@@ -1000,7 +1000,7 @@
 
 //=============class18  &  class19================
 
-$(function () {
+//$(function () {
     
     //=============class18===============
     //$('input').bind('click', function (e) {
@@ -1116,4 +1116,111 @@ $(function () {
 
     //============== class19================
 
-})
+
+    //解釋冒泡事件 從最小的事件範圍往大範圍事件發生
+    //input => div > document 重疊關係
+//    $('input').click(function(){
+//        alert('input')
+//    });
+  
+//    $('div').click(function(){
+//        alert('div')
+//    });
+
+//    $(document).click(function(){
+//        alert('document')
+//    });
+ 
+//    //阻止冒泡行為
+//    $('input').click(function(e){
+//        e.stopPropagation(); //禁止冒泡行為
+//        alert('input')
+//    });
+  
+//    $('div').click(function(e){
+//        e.stopPropagation(); //禁止冒泡行為
+//        alert('div')
+//    });
+
+//    $(document).click(function(){
+//        alert('document')
+//    });
+ 
+//    //事件的默認行為
+//    $('a').click(function(e){
+//        //點擊A 會出現提醒視窗 但不會另外開啟頁面
+//        e.preventDefault(); //阻止默認行為 
+//        alert('Yahoo');
+//    });
+  
+//    $('input').click(function(e){
+//        e.preventDefault(); //阻止默認行為 
+//        alert('表單送出');
+//    });
+ 
+//    //另外一種方法禁止表單送出
+//    $('form').submit(function(e){
+//        e.preventDefault(); //阻止默認行為 
+//        alert('表單送出');
+//    });
+ 
+ 
+//    //阻止冒泡和默認行為
+//    $('a').click(function(e){
+//        e.preventDefault();
+//        e.stopPropagation();
+//        alert('yahoo.com');
+//    });
+ 
+//    //阻止冒泡和默認行為  更佳簡便的方式
+//    $('a').click(function(e){
+//        alert('yahoo.com');
+//        return false;
+//    });
+  
+//    $('div').click(function(){
+//        alert('div')
+//    });
+
+//    $(document).click(function(){
+//        alert('document')
+//    });
+  
+//    $('a').click(function(e){
+//        e.preventDefault();
+//        e.stopPropagation()
+//        alert(e.isDefaultPrevented());
+//        alert(e.isPropagationStopped());
+//    });
+  
+  
+//    $('a').click(function(e){
+//        e.preventDefault();
+//        e.stopPropagation()
+//    });
+ 
+//    $('a').click(function(e){
+//        alert(e.isDefaultPrevented());
+//        alert(e.isPropagationStopped());
+//    });
+ 
+// $('a').click(function(e){
+//     //取消冒泡和後續相關行為
+//   e.stopImmediatePropagation();
+//   alert(e.isImmediatePropagationStopped());
+//   alert('a1');
+// });
+  
+// $('a').click(function(e){
+//   e.stopImmediatePropagation();
+//   alert('a2');
+// });
+  
+// $('div').click(function(e){
+//   alert('div')
+// });
+
+// $(document).click(function(){
+//   alert('document')
+// });
+//})

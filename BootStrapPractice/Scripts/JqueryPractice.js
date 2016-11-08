@@ -1224,3 +1224,131 @@
 //   alert('document')
 // });
 //})
+
+//============== class20  &   class21   &  class22================
+$(function () {
+    //===========class20=========
+    //模擬操作
+    /*
+     $('input').click(function () {
+        alert('我將要模擬用戶操作來觸發');
+    });
+
+    //模擬用戶點擊操作
+    $('input').trigger('click');
+
+    $('input').click(function () {
+        alert('我將要模擬用戶操作來觸發');
+    }).trigger('click');
+
+    //data1 = '123' , data2 = 'abc'
+    $('input').click(function (e,data1,data2) {
+        alert(data1 + ' | ' + data2);
+    }).trigger('click',['123','abc']);
+
+    //trigger額外數據 只有一組的時候可以省略中框號 , 多組的時候不能省略
+    //第2條之後就無法辨別了
+    $('input').click(function (e, data1, data2) {
+        alert(data1 + ' | ' + data2);
+    }).trigger('click', '123', 'abc');
+
+    $('input').click(function (e, data1, data2,data3,data4) {
+        alert(data1 + ' | ' + data2 + ' | ' + data3[1] + ' | ' + data4.User);
+    }).trigger('click', ['123', 'abc', ['a', 'b', 'c'], {User : 'Lin'}]);
+
+    //透過bind綁定click
+    $('input').bind('click',function (e, data1, data2, data3, data4) {
+        alert(data1 + ' | ' + data2 + ' | ' + data3[1] + ' | ' + data4.User);
+    }).trigger('click', ['123', 'abc', ['a', 'b', 'c'], { User: 'Lin' }]);
+    
+    //透過bind綁定click 在給上bind的資料 和 取用方式
+    $('input').bind('click', {User : 'QQQ'}, function (e, data1, data2, data3, data4) {
+        alert(data1 + ' | ' + data2 + ' | ' + data3[1] + ' | ' + data4.User + ' | ' + e.data.User);
+    }).trigger('click', ['123', 'abc', ['a', 'b', 'c'], { User: 'Lin' }]);
+
+    //click mouseover這些系統事件 , 自定義事件就是自己起名字的事件
+    $('input').bind('myEvent', function () {
+        alert('自定義事件')
+    }).trigger('myEvent');
+
+    //也可以直接綁定click事件 但建議還是以trigger使用比較好
+    $('input').click(function () {
+        alert('我將要模擬用戶操作來觸發');
+    }).click();
+
+    $('input').click(function () {
+        alert('我將要模擬用戶操作來觸發');
+    }).triggerHandler('click');
+
+    // trigger 和 triggerHandler的區別
+    //1.trigger提交後跳轉,沒有阻止默認行為
+    //$('form').trigger('submit');
+    //trigger提交後沒有跳轉,默認行為被阻止了
+    $('form').triggerHandler('submit');
+
+    //trigger提交後沒有跳轉,默認行為被阻止了 模擬triggerHandler
+    $('form').submit(function (e) {
+        e.preventDefault();
+    }).trigger('submit');
+
+    //2.事件執行次數
+    //input事件會全部執行
+    $('input').click(function () {
+        alert('我將要模擬用戶操作來觸發');
+    }).trigger('click');
+    //執行的次數只執行第一次 
+    $('input').click(function () {
+        alert('我將要模擬用戶操作來觸發');
+    }).triggerHandler('click');
+
+    //3.返回對象區別
+    //會返回一個JQ對象  所以可以使用連綴功能
+    $('input').click(function () {
+        alert('我將要模擬用戶操作來觸發');
+    }).trigger('click').css('color','red');
+
+    //無法使用連綴功能
+    //alert($('input').click(function () {
+    //    //alert('我將要模擬用戶操作來觸發');
+    //    //function內沒有返回值得話  回傳Undifined
+    //    return 123;
+    //    //有返回值的話 就回傳返回直 
+    //}).triggerHandler('click'));
+
+
+    //4.冒泡功能
+    $('div').bind('myEvent', function () {
+        alert('自定義事件')
+    });
+    $('.d3').trigger('myEvent');   //會冒泡
+
+    $('div').bind('myEvent', function () {
+        alert('自定義事件')
+    });
+    $('.d3').triggerHandler('myEvent');   //不會冒泡
+
+
+    //移除指定的事件
+    $('input').bind('click.abc', function () {
+        alert('abc')
+    });
+    $('input').bind('click.xyz', function () {
+        alert('xyz')
+    });
+    $('input').bind('mouseover.abc', function () {
+        alert('abc')
+    });
+    //全部事件清除
+    //$('input').unbind();
+    //只移除click.xyz事件
+    //$('input').unbind('click.abc');
+    //移除所有abc事件
+    //$('input').unbind('.abc');
+    
+    $('input').trigger('click.abc')
+     */
+    
+    
+});
+
+

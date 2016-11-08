@@ -1346,6 +1346,69 @@ $(function () {
     //$('input').unbind('.abc');
     
     $('input').trigger('click.abc')
+
+
+    //事件委託
+
+    //Bind綁定了3個事件
+    $('.button').bind('click', function () {
+        alert('事件不委託')
+    })
+
+    //live功能為JQ新版移除  使用需要載入擴充的JQ
+    //live綁定的是document 而非BUTTON
+    //所以永遠只綁定一次事件
+    $('.button').live('click', function () {
+        alert('事件委託')
+    })
+
+    //bind無法動態綁定事件
+    $('.button').bind('click', function () {
+        $(this).clone().appendTo('#box');
+    })
+
+    //live可以動態綁定事件  因為事件綁定在document上
+    $('.button').live('click', function () {
+        $(this).clone().appendTo('#box');
+    })
+
+    //.live是綁定在document上 而點擊按鈕其實是冒泡到document上
+    //並且點擊document時 需要驗證event.type和event.target才能觸發
+
+    //why .live被移除  
+    //1.因為從Button => div => body => document傳遞過程太長
+    //2..live不支持連綴調用 所以下面這段會有錯
+    alert($('#box').children(0).live('click', function () {
+        $(this).clone().appendTo('#box');
+    }));
+
+    $('.button').live('click', function () {
+        $(this).clone().appendTo('#box');
+    })
+
+    //和UNBIND是一個意思
+    $('.button').die('click');
+
+    //clone(true) => 複製事件行為
+    //clone(true) 雖然可以綁定事件  但有N次事件就需綁定N次 
+    //但此方法還是複製事件 並不是事件委託
+    $('.button').bind('click', function () {
+        $(this).clone(true).appendTo('#box');
+    })
+
+    $('.button').live('click', function () {
+        $('<input type="button" class="button" value="按鈕" />').appendTo('#box');
+    })
+
+    //live的替代方法.delegate
+    //live語意不清晰 原因為她沒有指定綁訂了誰 所以不清晰
+    //delegate語意清晰 綁定誰 誰就在開頭元素  
+    //要非常注意  delegate是以父元素調用
+    $('#box').delegate('.button', 'click', function () {
+        $(this).clone().appendTo('#box');
+    })
+    $('#box').undelegate('.button', 'click');
+
      */
     
     

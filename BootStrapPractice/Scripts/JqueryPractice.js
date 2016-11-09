@@ -1347,7 +1347,7 @@ $(function () {
     
     $('input').trigger('click.abc')
 
-
+    ===========class21=========
     //事件委託
 
     //Bind綁定了3個事件
@@ -1409,8 +1409,90 @@ $(function () {
     })
     $('#box').undelegate('.button', 'click');
 
+
+    //===========class22=========
+
+    //普通綁定 .bind
+    //普通解綁定  .unbind
+    //事件委託  .live  .delegate
+    //解除委託  .die   .undelegate 
+
+    //新方法綁定  .on  
+    //新方法解綁  .off 
+    //僅執行一次的綁定 .one
+
+    $('.button').on('click', function () {
+        alert('取代BIND')
+    });
+
+    //額外數據
+    $('.button').on('click', {user : 'Lin'}, function (e) {
+        alert('取代BIND' + ' | ' + e.data.user)
+    });
+
+    //執行多個事件
+    $('.button').on('mouseover mouseout', function (e) {
+        alert('移入移出')
+    });
+
+    $('.button').on({
+        mouseover: function () {
+            alert('移入')
+        },
+        mouseout: function () {
+            alert('移出')
+        },
+    });
+
+    //阻止冒泡行為
+    $('form').on('click', function () {
+        return false;
+    })
+
+    //阻止默認行為
+    $('form').on('click', false);
+    
+    //替代.bind()方式，阻止默认行为
+    $('form').on('submit', function (e) {
+        e.preventDefault();
+    });
+    //替代.bind()方式，取消冒泡
+    $('form').on('submit', function (e) {
+        e.stopPropagation();
+    });
+
+
+    $('.button').on('click', function () {
+        alert('取代BIND')
+    });
+
+    $('.button').off('click');
+
+    //替代.live .delegate
+    $('#box').on('click', '.button', function () {
+        $(this).clone().appendTo('#box')
+    })
+
+    //替代.live .delegate
+    $('#box').on('click', '.button', function () {
+        $(this).clone().appendTo('#box')
+    })
+
+    //移除事件委託
+    $('#box').off('click', '.button');
+
+    //只有一次事件觸發
+    $('.button').one('click', function () {
+        alert('只有一次事件觸發')
+    });
+
+    $('#box').one('click', '.button', function () {
+        $(this).clone().appendTo('#box')
+    })
+
      */
     
+
     
 });
 

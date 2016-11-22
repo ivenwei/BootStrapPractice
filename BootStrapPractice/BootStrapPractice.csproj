@@ -300,6 +300,7 @@
     <Content Include="Views\JqueryPractice\BasicEvent.cshtml" />
     <Content Include="Views\JqueryPractice\EventTarget.cshtml" />
     <Content Include="Views\JqueryPractice\AdvanceEvent.cshtml" />
+    <Content Include="Views\JqueryPractice\AnimationEffect.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

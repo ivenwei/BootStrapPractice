@@ -1226,7 +1226,7 @@
 //})
 
 //============== class20  &   class21   &  class22================
-$(function () {
+//$(function () {
     //===========class20=========
     //模擬操作
     /*
@@ -1491,9 +1491,414 @@ $(function () {
     })
 
      */
-    
+ 
+//});
 
-    
-});
+//============== class23  &   class24   &  class25================
+//$(function () {
+    //============== class23================
+    /*
+  $('.show').click(function(){
+     $('#box').show();
+  });
+  
+  $('.hide1').click(function(){
+     $('#box').hide();
+  });
+  
+  //可以傳遞兩個參數 一個是速度  另一個是回調函數
+  
+   $('.show').click(function(){
+     $('#box').show(1000);
+  });
+  
+  $('.hide1').click(function(){
+     $('#box').hide(1000);
+  });
+  
+  $('.show').click(function(){
+     $('#box').show();
+  });
+  
+  $('.hide1').click(function(){
+     $('#box').hide();
+  });
+   //slow normal fast
+  $('.show').click(function(){
+     $('#box').show('fast');
+  });
+  
+  $('.hide1').click(function(){
+     $('#box').hide('fast');
+  });
+  
+  //參數錯誤或是沒有參數的狀況下  會預設為SLOW 400毫秒
+  $('.show').click(function(){
+     $('#box').show('cvsd');
+  });
+  
+  $('.hide1').click(function(){
+     $('#box').hide('svsdv');
+  });
+  //回調函數 顯示後才會彈出視窗
+  $('.show').click(function(){
+     $('#box').show('slow',function(){
+       alert('顯示完畢')
+     });
+  });
+  
+ $('.hide1').click(function(){
+     $('#box').hide('slow',function(){
+       
+     });
+  });
+  
+  //錯誤作法  同步動畫 4個區塊一起顯示
+  $('.show').click(function(){
+     $('.test').show('fast');
+  });
+   $('.show').click(function(){
+     $('.test').eq(0).show('fast');
+     $('.test').eq(1).show('fast');
+  });
+  
+  //烈隊動畫 錯誤作法
+  $('.show').click(function(){
+     $('.test').eq(0).show('fast',function(){
+       $('.test').eq(1).show('fast',function(){
+         $('.test').eq(2).show('fast',function(){
+           $('.test').eq(3).show('fast');
+         });
+       });
+     });
+  });
+  
+  //烈隊動畫 遞迴自己調用
+  $('.show').click(function(){
+    $('.test').first().show('fast',function testShow(){
+      //this = $('.test').first() 
+      $(this).next().show('fast',testShow);
+    });
+  });
+ 
+   $('.hide1').click(function(){
+    $('.test').last().hide('fast',function testHide(){
+      //this = $('.test').last()
+      $(this).prev().hide('fast',testHide);
+    });
+  });
+  
+  //滑動效果
+   $('.up').click(function(){
+     $('#box').slideUp('slow');
+   });
+  
+   $('.down').click(function(){
+     $('#box').slideDown('slow');
+   });
+  
+  $('.toggle').click(function(){
+     $('#box').slideToggle('slow');
+   });
+  
+  $('.out').click(function () {
+        $('#box').fadeOut('slow');
+    });
 
+    $('.in').click(function () {
+        $('#box').fadeIn('slow');
+    });
+
+    $('.toggle').click(function () {
+        $('#box').fadeToggle('slow');
+    });
+
+    //直接到某一個透明度
+    $('.to').click(function () {
+        $('#box').fadeTo('slow', 0.33); //0-1之間
+    });
+
+    //============== class24================
+  */
+
+
+    /*
+     //自定義動畫
+    //多重同步動畫
+    $('.button').click(function () {
+        //4個效果同時連動
+        $('#box').animate({
+            width: '300px',
+            height: '200px',
+            opacity: 0.5,
+            fontSize : '50px'
+        });
+    });
+
+    //時間函數和回調函數
+    $('.button').click(function () {
+        $('#box').animate({
+            width: '300px',
+            height: '200px',
+            opacity: 0.5,
+            fontSize: '50px'
+        }, 2000, function () {
+            alert('動畫執行完畢')
+        });
+    });
+
+    //位移效果
+    $('.button').click(function () {
+        $('#box').animate({
+            left: '300px',  //移動到300相素的位置
+            top : '200px'
+        },'slow');
+    });
+
+    //執行時只能在原始位置 只要移動過後就不能再移動  因此提供另外一種方法
+    //累加累減功能
+    $('.button').click(function () {
+        $('#box').animate({
+            left: '+=300px', 
+        }, 'slow');
+    });
+
+    //回調函數加列隊動畫
+    $('.button').click(function () {
+        $('#box').animate({
+            width: '300px'
+        }, function () {
+            $('#box').animate({
+                height: '200px'
+            }, function () {
+                $('#box').animate({
+                    opacity: 0.5
+                }, function () {
+                    $('#box').animate({
+                        fontSize: '50px'
+                    });
+                });
+            });
+        });
+    });
+
+    //在同一個元素的基礎上 使用連綴或順序排列調用 可以實現列隊動畫
+    $('.button').click(function () {
+        $('#box').animate({width: '300px'})
+                 .animate({height: '200px'})
+                 .animate({opacity: 0.5})
+                 .animate({fontSize: '50px'})
+    });
+    //在同一個元素的基礎上 使用連綴或順序排列調用 可以實現列隊動畫
+    $('.button').click(function () {
+        $('#box').animate({ width: '300px' });
+        $('#box').animate({ height: '200px' });
+        $('#box').animate({ opacity: 0.5 });
+        $('#box').animate({ fontSize: '50px' });
+    });
+
+    $('.button').click(function () {
+        $('#box').animate({ width: '300px' });
+        $('#pox').animate({ height: '200px' });
+        $('#box').animate({ opacity: 0.5 });
+        $('#pox').animate({ fontSize: '50px' });
+    });
+
+    //box 第1條和第3條是列隊動畫
+    //pox 第2條和第4條是列隊動畫
+    //box的第1條和pox第2條是同步動畫
+    //box的第3條和pox第4條是同步動畫
+    //要如何順序執行??  回調函數加列隊動畫
+    $('.button').click(function () {
+        $('#box').animate({ width: '300px' });
+        $('#pox').animate({ height: '200px' });
+        $('#box').animate({ opacity: 0.5 });
+        $('#pox').animate({ fontSize: '50px' });
+    });
+
+    //易錯且不清晰
+     $('.button').click(function () {
+        $('#box').animate({
+            width: '300px'
+        }, function () {
+            $('#pox').animate({
+                height: '200px'
+            }, function () {
+                $('#box').animate({
+                    opacity: 0.5
+                }, function () {
+                    $('#pox').animate({
+                        fontSize: '50px'
+                    });
+                });
+            });
+        });
+    });
+
+    //CSS不是動畫方法 會和第一個列隊動畫同步執行
+    $('.button').click(function () {
+        $('#box').slideUp('slow').slideDown('slow').css('background','orange')
+    });
+
+    //缺點是FUN越多越不好理解 且汙染了動畫效果
+    $('.button').click(function () {
+        $('#box').slideUp('slow').slideDown('slow', function () {
+            $(this).css('background', 'orange')
+        })
+    });
+    //解決上述問題
+    $('.button').click(function () {
+        $('#box')
+            .slideUp('slow')
+            .slideDown('slow')
+            .queue(function () {
+                $(this).css('background', 'orange')
+            })
+    });
+
+    //但queue後面想再加入一個HIDE 會有問題  queue的特性導致
+    $('.button').click(function () {
+        $('#box')
+            .slideUp('slow')
+            .slideDown('slow')
+            .queue(function () {
+                $(this).css('background', 'orange')
+            }).hide('slow');
+    });
+
+    //如何解決 加上next方法  1.4方法後發布
+    $('.button').click(function () {
+        $('#box')
+            .slideUp('slow')
+            .slideDown('slow')
+            .queue(function (next) {
+                $(this).css('background', 'orange')
+                next();
+            }).hide('slow');
+    });
+
+    //如何解決 加上next方法  1.4方法以前的做法
+    $('.button').click(function () {
+        $('#box')
+            .slideUp('slow')
+            .slideDown('slow')
+            .queue(function (next) {
+                $(this).css('background', 'orange')
+                $(this).dequeue();
+            }).hide('slow');
+    });
+
+    //連綴調用改為順序調用
+    $('.button').click(function () {
+        $('#box').slideUp('slow');
+        $('#box').slideDown('slow');
+        $('#box').queue(function (next) {
+            $(this).css('background', 'orange');
+                $(this).dequeue();
+        })
+        $('#box').hide('slow');
+    });
+
+    $('.button').click(function () {
+        $('#box')
+            .slideUp('slow')
+            .slideDown('slow', function () { alert(count()) })
+            .queue(function (next) {
+                $(this).css('background', 'orange')
+                $(this).dequeue();
+            }).hide('slow');
+    });
+  
+    function count() {
+        return $('#box').queue('fx').length;
+    }
+     */
+
+    //清理列隊動作  後面動作不執行
+    //$('.button').click(function () {
+    //    $('#box')
+    //        .slideUp('slow')
+    //        .slideDown('slow', function () { $(this).clearQueue() })
+    //        .queue(function (next) {
+    //            $(this).css('background', 'orange')
+    //            $(this).dequeue();
+    //        }).hide('slow');
+    //});
+//});
+
+
+//============== class25================
+$(function () {
+    
+    /*
+     $('.button').click(function () {
+        $('#box').animate({
+            left:'800px'
+        },3000);
+    });
+
+    $('.stop').click(function () {
+        $('#box').stop();
+    });
+
+    //若有列隊動畫執行停掉  則會停止第1個列隊動畫然後繼續執行後續的動畫  stop無參數
+    //如何全部停止  
+    //第1個參數  stop(true)  停止並清除後面的列隊動畫 默認值為false
+    //第2個參數  stop(true,true)  停止後則會到第一個列隊動畫結尾的位置上 默認值為false
+    $('.button').click(function () {
+        $('#box').animate({ left: '300px' },1000);
+        $('#box').animate({ bottom: '300px' }, 1000);
+        $('#box').animate({ width: '300px' }, 1000);
+        $('#box').animate({ height: '300px' }, 1000);
+    });
+    $('.stop').click(function () {
+        $('#box').stop(true,true);
+    });
+  
+    //動畫延遲效果
+    $('.button').click(function () {
+        $('#box').delay(1000).animate({ left: '300px' });
+        $('#box').animate({ bottom: '300px' });
+        $('#box').animate({ width: '300px' }).delay(2000);
+        $('#box').animate({ height: '300px' });
+    });
+
+    //遞迴執行slideToggle動畫
+    $('#box').slideToggle('slow', function () {
+        $(this).slideToggle('slow',arguments.callee)
+    });
+    //將執行中的動畫變色
+    $('.ani').click(function () {
+        $(':animated').stop().css('background','blue')
+    });
+
+    //全局屬性
+    //默認是13
+    //$.fx.interval = 13;
+    $.fx.interval = 200;
+    $('.button').click(function () {
+        $('#box').toggle(1000);
+    });
+
+    //另一個全局屬性
+    //關閉動畫
+    $.fx.off = true;
+    $('.button').click(function () {
+        $('#box').toggle(1000);
+    });
+
+     */
+
+    //animate的補充
+    $('.button').click(function () {
+        $('#box').animate({
+            left: '800px'
+        }, 3000, 'swing', function () { });   //swing前後慢  中間快
+        $('#pox').animate({
+            left: '800px'
+        }, 3000, 'linear');  //linear均速運動
+    });
+    
+    
+})
 
